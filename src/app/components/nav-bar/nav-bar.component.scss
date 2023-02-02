@@ -1,0 +1,77 @@
+@import url("../../../styles.scss");
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 50px;
+    z-index: 1000;
+    background-color: var(--day-night-mode-components);
+    box-shadow: var(--day-night-mode-shadow);
+    container-type: inline-size;
+    container-name: nav-bar;
+    transition: ease-in-out .2s;
+
+    h1{
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: default;
+    }
+}
+
+.theme-mode{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    div{
+        display: flex;
+        
+        &:hover{
+            cursor: pointer;
+            transform: scale(115%);
+        }
+    }
+
+    h2{
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: .5px;
+        cursor: default;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+        padding: 0;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .container{
+        h1{
+            font-size: 12px;
+        }
+    }
+    
+    .theme-mode{
+        gap: .5rem;
+
+        div{
+            font-size: 12px;
+        }
+
+        h2{
+            font-size: 12px;
+        }
+    }
+}

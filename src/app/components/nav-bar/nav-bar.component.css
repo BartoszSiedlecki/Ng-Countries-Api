@@ -1,0 +1,51 @@
+@import url("../../../styles.scss");
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 50px;
+  background-color: var(--day-night-mode-components);
+  box-shadow: var(--day-night-mode-shadow);
+  z-index: 1000;
+}
+.container h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.theme-mode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-mode div {
+  display: flex;
+  transition: ease-in-out 0.2s;
+}
+.theme-mode div:hover {
+  cursor: pointer;
+  transform: scale(115%);
+}
+.theme-mode h2 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: default;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}/*# sourceMappingURL=nav-bar.component.css.map */

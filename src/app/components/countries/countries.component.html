@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="filters">
+        <app-search-bar></app-search-bar>
+        <app-filter></app-filter>
+    </div>
+    <div class="countries">
+        <div class="country" *ngFor="let country of countries">
+            <div (click)="countryDetails(country)">
+                <div class="country__flag">
+                    <img src="{{ country.flags.png }}" alt="flag"/>
+                </div>
+                <div class="country__info">
+                    <h1>{{ country.name.common }}</h1>
+                    <h3>Population: <span>{{ country.population }}</span></h3>
+                    <h3>Region: <span>{{ country.region }}</span></h3>
+                    <h3>Capital: <span>{{ country.capital }}</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

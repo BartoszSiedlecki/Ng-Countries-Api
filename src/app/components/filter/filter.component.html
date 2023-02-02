@@ -1,0 +1,18 @@
+<form class="filters">
+    <mat-form-field>
+        <mat-label>Filter by Region</mat-label>
+        <mat-select 
+            panelClass="sort-select"
+            name="filters"
+            ngModel="sort"
+            (selectionChange)="filterCountries($event)"
+        >
+            <mat-option value="any">Any</mat-option>
+            <mat-option value="africa">Africa</mat-option>
+            <mat-option value="america">America</mat-option>
+            <mat-option value="asia">Asia</mat-option>
+            <mat-option value="europe">Europe</mat-option>
+            <mat-option value="oceania">Oceania</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

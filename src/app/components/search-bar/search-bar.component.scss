@@ -1,0 +1,52 @@
+@import url("../../../styles.scss");
+
+.search-bar{
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--day-night-mode-shadow);
+    border-radius: 5px;
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--day-night-mode-components);
+    transition: ease-in-out .2s;
+
+    &__icon{
+        display: flex;
+        transform: scale(70%);
+        color: var(--day-night-mode-text);
+        cursor: default;
+    }
+
+    &__area{
+        padding-right: 10px;
+        height: 100%;
+        width: 80%;
+        border: none;
+        font-size: 10px;
+        transition: ease-in-out .2s;
+        background-color: var(--day-night-mode-components);
+        
+
+        &:focus{
+            width: 100%;
+            outline: 0;
+        }
+    }
+}
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@media only screen and (max-width: 700px){
+    .search-bar{
+        width: 75vw;
+    }
+}

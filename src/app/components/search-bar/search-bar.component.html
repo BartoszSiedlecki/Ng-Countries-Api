@@ -1,0 +1,13 @@
+<form class="search-bar" #form="ngForm" (ngSubmit)="searchCountries(form)">
+    <div class="search-bar__icon">
+        <span class="material-symbols-outlined">search</span>
+    </div>
+    <input 
+        class="search-bar__area" 
+        type="search" 
+        name="search"
+        ngModel
+        placeholder="Search for a country..." 
+    />
+</form>
+

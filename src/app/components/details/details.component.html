@@ -1,0 +1,46 @@
+<main class="container">
+    <button class="back-btn" type="button" (click)="backToHomePage()">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+        Back
+    </button>
+    <div class="details-container">
+        <div class="flag">
+            <img src="{{ myCountry.flags.svg }}" alt="flag">
+        </div>
+        <div class="details">
+            <h1 class="header">{{ myCountry.name.common }}</h1>
+            <div class="info">
+                <h3 class="detail">Native Name:<span>{{ myCountry.name.official }}</span></h3>
+                <h3 class="detail">Population:<span>{{ myCountry.population }}</span></h3>
+                <h3 class="detail">Region:<span>{{ myCountry.region }}</span></h3>
+                <h3 class="detail">Sub Region:<span>{{ myCountry.subregion }}</span></h3>
+                <h3 class="detail">Capital:<span>{{ myCountry.capital }}</span></h3>
+                <h3 class="detail">Top Level Domain:<span>{{ myCountry.tld }}</span></h3>
+                <h3 class="detail" *ngIf="currencyList?.length">
+                    Currencies:
+                    <span *ngFor="let currency of currencyList; let last = last">
+                        {{ currency }}
+                        <span *ngIf="!last">, </span>
+                    </span>
+                </h3>
+                <h3 class="detail" *ngIf="languageList?.length">
+                    Languages:
+                    <span *ngFor="let language of languageList; let last = last">
+                        {{ language }}
+                        <span *ngIf="!last">, </span>
+                    </span>
+                </h3>
+            </div>
+            <div class="borders">
+                <h3 class="detail">Border Countries:</h3>
+                <div>
+                    <div class="border" *ngFor="let border of myCountry.borders">
+                        {{ border }}
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</main>

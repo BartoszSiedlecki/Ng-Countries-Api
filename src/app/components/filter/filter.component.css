@@ -1,0 +1,23 @@
+@import url("../../../styles.scss");
+.filters {
+  height: 40px;
+  transform: scale(0.75);
+}
+
+::ng-deep .mat-form-field-infix {
+  background-color: var(--day-night-mode-components);
+  box-shadow: var(--day-night-mode-shadow);
+  border-radius: 5px;
+}
+::ng-deep .mat-select-value,
+::ng-deep .mat-select-arrow,
+::ng-deep .mat-form-field-hide-placeholder .mat-select-placeholder,
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: var(--day-night-mode-text);
+}
+::ng-deep .mat-form-field-label {
+  padding-left: 10px;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}/*# sourceMappingURL=filter.component.css.map */

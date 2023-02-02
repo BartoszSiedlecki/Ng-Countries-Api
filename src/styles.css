@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --day-night-mode-bg: hsl(207, 26%, 17%);
+  --day-night-mode-components: hsl(209, 23%, 22%);
+  --day-night-mode-shadow: 2px 2px 3px .5px black;
+  --day-night-mode-text: white;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 4rem;
+  padding-top: 5rem;
+  background-color: var(--day-night-mode-bg);
+  color: var(--day-night-mode-text);
+}/*# sourceMappingURL=styles.css.map */
