@@ -9,6 +9,7 @@ export class NavBarComponent implements OnInit {
   public variables:any = document.querySelector(':root')
   public day:number = 0 
   dayNightMode: string = "light_mode"
+  dayNightModeTemplate: string = "Light Mode"
 
   constructor() { }
 
@@ -17,6 +18,7 @@ export class NavBarComponent implements OnInit {
 
   toggleDarkMode(){
     this.dayNightMode = "dark_mode"
+    this.dayNightModeTemplate = "Dark Mode"
     if(this.day == 0){
       this.day = 1
       this.variables.style.setProperty("--day-night-mode-bg", "rgb(255, 255, 255)")
@@ -26,6 +28,7 @@ export class NavBarComponent implements OnInit {
     }
     else{
       this.dayNightMode = "light_mode"
+      this.dayNightModeTemplate = "Light Mode"
       this.day = 0
       this.variables.style.setProperty("--day-night-mode-bg", "hsl(207, 26%, 17%)")
       this.variables.style.setProperty("--day-night-mode-components", "hsl(209, 23%, 22%)")
